@@ -7,11 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9D8BA042219DF48E003676EB /* LocationSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D8BA041219DF48E003676EB /* LocationSearchViewController.swift */; };
+		9D9396C7219F28E000BE2FFF /* Weather Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D9396C6219F28E000BE2FFF /* Weather Data.swift */; };
+		9DAC85E921A3357F000C71A5 /* geocodingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DAC85E821A3357F000C71A5 /* geocodingData.swift */; };
 		9DF42FEE219CA170007299BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF42FED219CA170007299BA /* AppDelegate.swift */; };
-		9DF42FF0219CA170007299BA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF42FEF219CA170007299BA /* ViewController.swift */; };
+		9DF42FF0219CA170007299BA /* WeatherDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF42FEF219CA170007299BA /* WeatherDisplayViewController.swift */; };
 		9DF42FF3219CA170007299BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DF42FF1219CA170007299BA /* Main.storyboard */; };
 		9DF42FF5219CA170007299BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9DF42FF4219CA170007299BA /* Assets.xcassets */; };
 		9DF42FF8219CA170007299BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9DF42FF6219CA170007299BA /* LaunchScreen.storyboard */; };
+		9DF43001219CA646007299BA /* APIKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF43000219CA646007299BA /* APIKeys.swift */; };
+		9DF43004219CAA4C007299BA /* typeAlias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF43003219CAA4C007299BA /* typeAlias.swift */; };
+		9DF43006219CAAC0007299BA /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF43005219CAAC0007299BA /* APIManager.swift */; };
 		E8129796A203E8D2E81460D4 /* Pods_IOSWeatherApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73BACBB812B218EF4B74E496 /* Pods_IOSWeatherApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -19,13 +25,19 @@
 		3606CF104EF6959F06D44EE9 /* Pods-IOSWeatherApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IOSWeatherApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IOSWeatherApp/Pods-IOSWeatherApp.debug.xcconfig"; sourceTree = "<group>"; };
 		73BACBB812B218EF4B74E496 /* Pods_IOSWeatherApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IOSWeatherApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		840A0104D210BCA2254C7E31 /* Pods-IOSWeatherApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IOSWeatherApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-IOSWeatherApp/Pods-IOSWeatherApp.release.xcconfig"; sourceTree = "<group>"; };
+		9D8BA041219DF48E003676EB /* LocationSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchViewController.swift; sourceTree = "<group>"; };
+		9D9396C6219F28E000BE2FFF /* Weather Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Weather Data.swift"; sourceTree = "<group>"; };
+		9DAC85E821A3357F000C71A5 /* geocodingData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = geocodingData.swift; sourceTree = "<group>"; };
 		9DF42FEA219CA170007299BA /* IOSWeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IOSWeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DF42FED219CA170007299BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9DF42FEF219CA170007299BA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9DF42FEF219CA170007299BA /* WeatherDisplayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDisplayViewController.swift; sourceTree = "<group>"; };
 		9DF42FF2219CA170007299BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9DF42FF4219CA170007299BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9DF42FF7219CA170007299BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9DF42FF9219CA170007299BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9DF43000219CA646007299BA /* APIKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKeys.swift; sourceTree = "<group>"; };
+		9DF43003219CAA4C007299BA /* typeAlias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = typeAlias.swift; sourceTree = "<group>"; };
+		9DF43005219CAAC0007299BA /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +58,24 @@
 				73BACBB812B218EF4B74E496 /* Pods_IOSWeatherApp.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9D8BA043219DF495003676EB /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				9D8BA041219DF48E003676EB /* LocationSearchViewController.swift */,
+				9DF42FEF219CA170007299BA /* WeatherDisplayViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		9D9396C5219F287400BE2FFF /* Data Models */ = {
+			isa = PBXGroup;
+			children = (
+				9D9396C6219F28E000BE2FFF /* Weather Data.swift */,
+				9DAC85E821A3357F000C71A5 /* geocodingData.swift */,
+			);
+			path = "Data Models";
 			sourceTree = "<group>";
 		};
 		9DF42FE1219CA16F007299BA = {
@@ -69,14 +99,34 @@
 		9DF42FEC219CA170007299BA /* IOSWeatherApp */ = {
 			isa = PBXGroup;
 			children = (
+				9D9396C5219F287400BE2FFF /* Data Models */,
+				9D8BA043219DF495003676EB /* ViewControllers */,
+				9DF43002219CAA33007299BA /* LocationAlias */,
+				9DF42FFF219CA639007299BA /* API */,
 				9DF42FED219CA170007299BA /* AppDelegate.swift */,
-				9DF42FEF219CA170007299BA /* ViewController.swift */,
 				9DF42FF1219CA170007299BA /* Main.storyboard */,
 				9DF42FF4219CA170007299BA /* Assets.xcassets */,
 				9DF42FF6219CA170007299BA /* LaunchScreen.storyboard */,
 				9DF42FF9219CA170007299BA /* Info.plist */,
 			);
 			path = IOSWeatherApp;
+			sourceTree = "<group>";
+		};
+		9DF42FFF219CA639007299BA /* API */ = {
+			isa = PBXGroup;
+			children = (
+				9DF43000219CA646007299BA /* APIKeys.swift */,
+				9DF43005219CAAC0007299BA /* APIManager.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		9DF43002219CAA33007299BA /* LocationAlias */ = {
+			isa = PBXGroup;
+			children = (
+				9DF43003219CAA4C007299BA /* typeAlias.swift */,
+			);
+			path = LocationAlias;
 			sourceTree = "<group>";
 		};
 		D1C2094D363FBF209A310326 /* Pods */ = {
@@ -202,8 +252,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9DF42FF0219CA170007299BA /* ViewController.swift in Sources */,
+				9DF43001219CA646007299BA /* APIKeys.swift in Sources */,
+				9D8BA042219DF48E003676EB /* LocationSearchViewController.swift in Sources */,
+				9DF42FF0219CA170007299BA /* WeatherDisplayViewController.swift in Sources */,
+				9DF43006219CAAC0007299BA /* APIManager.swift in Sources */,
+				9D9396C7219F28E000BE2FFF /* Weather Data.swift in Sources */,
+				9DF43004219CAA4C007299BA /* typeAlias.swift in Sources */,
 				9DF42FEE219CA170007299BA /* AppDelegate.swift in Sources */,
+				9DAC85E921A3357F000C71A5 /* geocodingData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

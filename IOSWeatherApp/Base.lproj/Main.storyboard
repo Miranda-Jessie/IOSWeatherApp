@@ -1,24 +1,159 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7ac-BT-Kuz">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Change Location-->
+        <scene sceneID="NMA-BM-UfM">
+            <objects>
+                <viewController title="Change Location" id="oMh-Sm-hQQ" customClass="LocationSearchViewController" customModule="IOSWeatherApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aKV-VZ-k9g">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="551"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" placeholder="Search for location" translatesAutoresizingMaskIntoConstraints="NO" id="mPF-4M-lE3">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="mPF-4M-lE3" firstAttribute="trailing" secondItem="QgY-Zl-h6v" secondAttribute="trailing" id="FsO-9V-UTb"/>
+                            <constraint firstItem="mPF-4M-lE3" firstAttribute="top" secondItem="QgY-Zl-h6v" secondAttribute="top" id="HOs-Rq-DAp"/>
+                            <constraint firstItem="mPF-4M-lE3" firstAttribute="leading" secondItem="QgY-Zl-h6v" secondAttribute="leading" id="fU7-bU-ogG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="QgY-Zl-h6v"/>
+                    </view>
+                    <connections>
+                        <outlet property="searchBar" destination="mPF-4M-lE3" id="lA1-hc-wlZ"/>
+                        <segue destination="1Mo-pK-nMv" kind="unwind" identifier="unwindToWeatherDisplay" unwindAction="unwindToWeatherSegueWithSegue:" id="cIZ-93-xRS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MM9-4J-dmi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="1Mo-pK-nMv" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1886" y="127"/>
+        </scene>
+        <!--Doppler-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="WeatherDisplayViewController" customModule="IOSWeatherApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Example_Kentucky" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h4Q-CL-n8h">
+                                <rect key="frame" x="16" y="16" width="143" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="darkSkyLogo" translatesAutoresizingMaskIntoConstraints="NO" id="53c-pi-Rr6">
+                                <rect key="frame" x="0.0" y="501" width="100" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="53c-pi-Rr6" secondAttribute="height" multiplier="2:1" id="bMY-1P-V1y"/>
+                                    <constraint firstAttribute="height" constant="50" id="vmb-dm-N9h"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="fKM-tk-j4s">
+                                <rect key="frame" x="0.0" y="147" width="375" height="257.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="❄️" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DuD-bK-N5t">
+                                        <rect key="frame" x="128" y="0.0" width="119" height="131.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="110"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="32°" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NxH-ic-dK9">
+                                        <rect key="frame" x="140.5" y="131.5" width="94.5" height="72"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HZP-hX-pTC">
+                                        <rect key="frame" x="77" y="203.5" width="221.5" height="54"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-100°" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XN9-WA-D7B">
+                                                <rect key="frame" x="0.0" y="0.0" width="112.5" height="54"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                                <color key="textColor" red="0.35592542211199957" green="0.58208276236621559" blue="0.91921168565750122" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="/" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q5A-AC-rhp">
+                                                <rect key="frame" x="112.5" y="0.0" width="15" height="54"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100°" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iwV-VA-AjP">
+                                                <rect key="frame" x="127.5" y="0.0" width="94" height="54"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
+                                                <color key="textColor" red="0.91768509149551392" green="0.34010541931196264" blue="0.32255062778732074" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="fKM-tk-j4s" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="5IF-6A-VcK"/>
+                            <constraint firstItem="fKM-tk-j4s" firstAttribute="top" secondItem="h4Q-CL-n8h" secondAttribute="bottom" constant="110.5" id="CHb-FD-nC4"/>
+                            <constraint firstItem="h4Q-CL-n8h" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="FSG-Cm-o9w"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fKM-tk-j4s" secondAttribute="trailing" id="LpY-LH-M2S"/>
+                            <constraint firstItem="53c-pi-Rr6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ave-Be-3fr"/>
+                            <constraint firstItem="53c-pi-Rr6" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="gXn-b6-xxv"/>
+                            <constraint firstItem="h4Q-CL-n8h" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="v3k-a6-owf"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Doppler" id="vx1-bk-g6N">
+                        <barButtonItem key="rightBarButtonItem" title="Change Location" id="WdH-wg-lto">
+                            <connections>
+                                <segue destination="oMh-Sm-hQQ" kind="show" id="VBs-sd-SSd"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="currentTempLabel" destination="NxH-ic-dK9" id="6tN-9L-Lkj"/>
+                        <outlet property="highTempLabel" destination="iwV-VA-AjP" id="y5z-8I-O8G"/>
+                        <outlet property="iconLabel" destination="DuD-bK-N5t" id="Dug-8w-znp"/>
+                        <outlet property="locationLabel" destination="h4Q-CL-n8h" id="ZEX-oj-FGD"/>
+                        <outlet property="lowTempLabel" destination="XN9-WA-D7B" id="nAY-6I-vS3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1076" y="128.18590704647679"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ezr-MC-akG">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7ac-BT-Kuz" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" largeTitles="YES" id="s5W-M2-Hlr">
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="OyB-Xf-HUW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9MG-nA-aID" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="297" y="128"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="darkSkyLogo" width="318" height="159"/>
+    </resources>
 </document>
